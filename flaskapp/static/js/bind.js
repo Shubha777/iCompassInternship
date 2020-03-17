@@ -1,4 +1,6 @@
 
+// handles the data received from the chatbot 
+
 var data=[];
 
 function addBr(text){

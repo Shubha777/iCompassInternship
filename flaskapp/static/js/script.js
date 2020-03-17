@@ -78,7 +78,7 @@ recognition.onerror = function(event) {
 }
 
 /*-----------------------------
-      App buttons and input 
+      App buttons for record and input 
 ------------------------------*/
 //start record
 $('#start-record-btn').on('click', function(e) {
@@ -107,12 +107,6 @@ noteTextarea.on('input', function() {
   noteContent = $(this).val();
 })
 
-//---------------------------------- Scroll to the bottom of the chats-------------------------------
-// function scrollToBottomOfResults() {
-// 	var terminalResultsDiv = document.getElementById('chats');
-// 	terminalResultsDiv.scrollTop = terminalResultsDiv.scrollHeight;
-// }
-
 
 /*-----------------------------
       Speech Synthesis 
@@ -130,7 +124,9 @@ function readOutLoud(message) {
 	window.speechSynthesis.speak(speech);
 }
 
-//script 1
+/*------------------------Card Animation----------------------------
+
+-------------------------------------------------------------------*/
 
  //card1 flip and// drag
  ( function() {
@@ -159,33 +155,12 @@ function readOutLoud(message) {
 
 
 
-    
-   /* sleep(1000).then(() => {
-      card.parentElement.classList.toggle('justify-content-center');
-      
-    } ) ; 
-
-    sleep(2000).then(() => {
-      card.parentElement.classList.toggle('slideInRight');
-      
-    } ) ; */
-
     sleep(4000).then(() => {
       console.log(this.parentElement.parentElement.parentElement);
       this.parentElement.remove();
       document.getElementById("kd").style.display="block";
     } ) ; 
-    /*card.children[0].children[0].children[1].classList.toggle('fill');
-    const empty = document.querySelector('.empty'); 
-    const fill = document.querySelector('.fill')
-    console.log(card.children[0]); 
-    card.children[0].addEventListener('dragstart',dragStart); 
-    card.children[0].addEventListener('dragend',dragEnd); 
 
-    empty.addEventListener('dragover',dragOver); 
-    empty.addEventListener('dragenter',dragEnter); 
-    empty.addEventListener('dragLeave',dragLeave);   
-    empty.addEventListener('drop',dragDrop); */
   });
   
 })();
@@ -214,17 +189,7 @@ function readOutLoud(message) {
       this.parentElement.remove();
       document.getElementById("kd").style.display="block";
     } ) ; 
-   /* card.children[0].children[0].children[1].classList.toggle('fill');
-    const empty = document.querySelector('.empty'); 
-    const fill = document.querySelector('.fill')
-    console.log(card.children[0]); 
-    card.children[0].addEventListener('dragstart',dragStart); 
-    card.children[0].addEventListener('dragend',dragEnd); 
 
-    empty.addEventListener('dragover',dragOver); 
-    empty.addEventListener('dragenter',dragEnter); 
-    empty.addEventListener('dragLeave',dragLeave);   
-    empty.addEventListener('drop',dragDrop); */
   });
   
 })();
@@ -252,17 +217,7 @@ function readOutLoud(message) {
       this.parentElement.remove();
       document.getElementById("kd").style.display="block";
     } ) ; 
-   /* card.children[0].children[0].children[1].classList.toggle('fill');
-    const empty = document.querySelector('.empty'); 
-    const fill = document.querySelector('.fill')
-    console.log(card.children[0]); 
-    card.children[0].addEventListener('dragstart',dragStart); 
-    card.children[0].addEventListener('dragend',dragEnd); 
 
-    empty.addEventListener('dragover',dragOver); 
-    empty.addEventListener('dragenter',dragEnter); 
-    empty.addEventListener('dragLeave',dragLeave);   
-    empty.addEventListener('drop',dragDrop); */
   });
   
 })();
@@ -289,50 +244,10 @@ function sleep (time) {
     }
 
 
+/*------------------- ParallaxTiltEffect------------------
+         handling the 3D animation of the cards           
+---------------------------------------------------------*/             
 
-
-
-
-
-
-//drag functions
-/*
-function dragStart()
-{
-  setTimeout(() => this.parentElement.parentElement.className="invisible",0);
-}
-function dragEnd()
-{   
-  this.parentElement.parentElement.parentElement.parentElement.remove();
-  
-}
-
-function dragOver(e)
-{
-  e.preventDefault();     
-}
-
-function dragEnter(e)
-{
-  e.preventDefault();    
-}
-function dragLeave() {}
-
-function dragDrop()
-{ 
-  this.src = "image1.png";
-  this.classList.toggle('animated'); 
-  this.classList.toggle('heartBeat');
-  console.log(this.parentElement.parentElement.parentElement.parentElement.parentElement);
-  
- 
-  sleep(2000).then(() => {
-    this.parentElement.parentElement.parentElement.parentElement.parentElement.remove();
-  } ) ; 
-    
-
-}
-*/
 
 class parallaxTiltEffect {
   constructor({element, tiltEffect}) {
