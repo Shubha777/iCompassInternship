@@ -1,0 +1,244 @@
+body {
+ background-image: url(../img/Artboard.png);
+
+ 
+  
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+.rotate {
+  
+  transform: rotate(30deg);
+}
+
+.scene {
+    width: 200px;
+    height: 260px;
+    perspective: 600px;
+  }
+
+  .card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+   
+    
+  }
+  
+  .card__face {
+    position: absolute;
+    height: 364px;
+    width: 211px;
+    backface-visibility: hidden;
+    display: grid;
+    border-radius: 4px;
+  }
+
+  .card__face--front {
+    position: absolute;
+    border-radius: 4px;
+    height: 362px;
+    width: 211px;
+    display: grid;
+
+
+
+ 
+  align-items: flex-end;
+  position: relative;
+    
+  }
+  
+  .card__face--back {
+    background: rgba(0,0,0,1);
+    transform: rotateY( 180deg ) ; 
+    
+
+    
+  }
+
+
+  .card.is-flipped {
+    transform: rotateY(180deg);
+  }
+
+  .invisible {
+    display: none;
+  }
+
+.demo--card-flip .demo--card-flip2 .demo--card-flip3
+{
+  margin-bottom: 50px;
+}
+
+  .wave {
+    background-image: url(../img/wave.png);
+    position : fixed ; 
+    width : 100% ; 
+    height: 143px;
+    bottom: 0;
+    left: 0;
+    animation: animate 10s linear infinite;
+    opacity: .3;
+ 
+  }
+
+  .wave:before{
+    content : '';
+    background-image: url(../img/wave.png);
+    position : fixed ; 
+    width : 100% ; 
+    height: 143px;
+    bottom: 0;
+    left: 0;
+    animation: animate-reverse 10s linear infinite;
+    opacity: .5;
+ 
+  }
+
+  .wave:after{
+    content : '';
+    background-image: url(../img/wave.png);
+    position : fixed ; 
+    width : 100% ; 
+    height: 143px;
+    bottom: 0;
+    left: 0;
+    animation-delay: -5s;
+    animation: animate 20s linear infinite;
+    opacity: .7;
+ 
+  }
+
+  @keyframes animate {
+    0% 
+    {
+      background-position : 0 ; 
+    }
+
+    100% 
+    {
+      background-position: 1360px;
+    }
+  }
+
+  @keyframes animate-reverse {
+    0% 
+    {
+      background-position : 1360px ; 
+    }
+
+    100% 
+    {
+      background-position: 0;
+    }
+  }
+
+
+  @keyframes visible {
+    0% 
+    {
+      opacity: 0% ; 
+    }
+
+    100% 
+    {
+      opacity: 100%;
+    }
+  }
+
+
+
+  /* added code */ 
+  *,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.wrap {
+  margin: 2rem;
+  transform-style: preserve-3d;
+  transform: perspective(100rem);
+  cursor: pointer;
+}
+.cont {
+  --rX: 0;
+  --rY: 0;
+  --bX: 50%;
+  --bY: 80%;
+  width: 280px;
+  height: 430px;
+  border: 1px solid #e7e8f1;
+  border-radius: 1.6rem;
+  padding: 4rem;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  transform: rotate(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+  background: linear-gradient(#4CA690, hsla(0, 0%, 100%, .1));
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+  transition: transform .6s 1s;
+}
+.cont:before,
+.cont:after {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #fff;
+  position: absolute;
+  z-index: 2;
+  opacity: .3;
+  transition: .3s;
+}
+.cont:before {
+  top: 2rem;
+  right: 2rem;
+  border-bottom-width: 0;
+  border-left-width: 0;
+}
+.cont:after {
+  bottom: 2rem;
+  left: 2rem;
+  border-top-width: 0;
+  border-right-width: 0;
+}
+.container--active {
+  transition: none;
+}
+
+
+.wrap:hover .cont:before,
+.wrap:hover .cont:after {
+  width: calc(100% - 4rem);
+  height: calc(100% - 4rem);
+}
+
+/* added code */
+
+#kd 
+{
+ width: 60%;
+ height: 60%;
+  max-width: 60%;
+  max-height: 60%;
+}
+
+  

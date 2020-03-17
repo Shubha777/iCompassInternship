@@ -1,0 +1,16 @@
+.chat_window{
+	/* margin-left: 50%; */
+	height: calc(75%);
+}
+.messages{
+	height: calc(77%);
+}
+​
+.messages .message.left .text {
+    
+    font-weight: inherit;
+}
+​
+#msg_input{
+    color: #4CA690;
+}

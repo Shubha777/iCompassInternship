@@ -1,0 +1,211 @@
+{% extends "base.html" %}
+
+{% block header %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/chat_interface.css") }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/temporary.css") }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/style.css") }}">
+
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Open+Sans:300|Oxygen|Material+Icons" rel="stylesheet">
+
+
+ 
+{% endblock %}
+
+{% block content %}
+<div class=" row animated  justify-content-center  delay-5s">
+    <div class="col-md-3">
+      <div class="card rounded rotate mb-5 animated fadeOutUp" style="width: 20rem;height:auto;">
+        <img class="card-img img-responsive w-100 " src="{{url_for('static',filename='img/image2.png')}}">
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card rounded rotate mb-5 animated fadeOutDown" style="width: 20rem;height:auto;">
+        <img class="card-img img-responsive w-100" src="{{url_for('static',filename='img/image2.png')}}">
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card rounded rotate mb-5 animated fadeOutUp" style="width: 20rem;height:auto;">
+        <img class="card-img img-responsive w-100" src="{{url_for('static',filename='img/image2.png')}}">
+      </div>
+    </div>
+
+</div>
+
+<!-- Second row -->    
+
+<div class=" row animated  justify-content-center  delay-5s">
+  <div class="col-md-3">
+    <div class="card rounded rotate mb-5 animated fadeOutUp" style="width: 20rem;height:auto;">
+      <img class="card-img img-responsive w-100" src="{{url_for('static',filename='img/image2.png')}}">
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card rounded rotate mb-5 animated fadeOutDown" style="width: 20rem;height:auto;">
+      <img class="card-img img-responsive w-100" src="{{url_for('static',filename='img/image2.png')}}">
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card rounded rotate mb-5 animated fadeOutUp" style="width: 20rem;height:auto;">
+      <img class="card-img img-responsive w-100" src="{{url_for('static',filename='img/image2.png')}}">
+    </div>
+  </div>
+
+</div>
+
+
+<!-- Third row -->
+
+<div class=" row animated justify-content-center  delay-5s">
+<div class="col-md-3">
+  <div class="card rounded rotate mb-5 animated fadeOutUp" style="width: 20rem;height:auto;">
+    <img class="card-img img-responsive w-100" src="{{url_for('static',filename='img/image2.png')}}">
+  </div>
+</div>
+
+<div class="col-md-3">
+  <div class="card rounded rotate mb-5 animated fadeOutDown" style="width: 20rem;height:auto;">
+    <img class="card-img img-responsive w-100" src="{{url_for('static',filename='img/image2.png')}}">
+  </div>
+</div>
+
+<div class="col-md-3">
+  <div class="card rounded rotate mb-5 animated fadeOutUp" style="width: 20rem;height:auto;">
+    <img class="card-img img-responsive w-100" src="{{url_for('static',filename='img/image2.png')}}">
+  </div>
+</div>
+
+</div> 
+
+
+<!-- card choice -->
+
+<!-- Face  -->
+
+<div class=" row animated justify-content-center  delay-5s">
+<div class="col-md-3">
+<div class="card rounded rotate mb-5 animated fadeOutUp" style="width: 20rem;height:auto;">
+  <img class="card-img img-responsive w-100" src="{{url_for('static',filename='img/image2.png')}}">
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card rounded rotate mb-5 animated fadeOutDown" style="width: 20rem;height:auto;">
+  <img class="card-img img-responsive w-100" src="{{url_for('static',filename='img/image2.png')}}">
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card rounded rotate mb-5 animated fadeOutUp" style="width: 20rem;height:auto;">
+  <img class="card-img img-responsive w-100" src="{{url_for('static',filename='img/image2.png')}}">
+</div>
+</div>
+
+</div> 
+
+
+
+<!-- Pile -->
+
+<div class="container">
+  <div class="row justify-content-center animated fadeInUp delay-5s" style="margin-top:100px;">
+    <div class="col-md-4 animated">
+      <div class="demo demo--card-flip animated  wrap wrap--1 last">
+          <div class="scene  cont scene--card" draggable="true">
+            <div class="card rounded"  style="border: 0px;">
+              <img src="{{url_for('static',filename='img/image2.png')}}" draggable="true" class=" card__face card__face--front w-100 img-responsive">
+              <img src="{{url_for('static',filename='img/image1.png')}}" draggable="true" class=" card__face card__face--back w-100 img-responsive">
+            </div>
+          </div>
+        </div>      
+    </div>
+
+    <div class="col-md-4 animated ">
+      <div class="demo demo--card-flip2  animated wrap wrap--2 last">
+          <div class="scene cont scene--card" draggable="true">
+            <div class="card rounded " style="border: 0px;">
+              <img src="{{url_for('static',filename='img/image2.png')}}" draggable="true" class=" card__face card__face--front w-100 img-responsive">
+              <img src="{{url_for('static',filename='img/image1.png')}}" draggable="true" class=" card__face card__face--back w-100 img-responsive">
+            </div>
+          </div>
+        </div>      
+    </div>
+
+    <div class="col-md-4 animated">
+      <div class="demo demo--card-flip3 animated wrap wrap--3 last">
+          <div class="scene cont scene--card" draggable="true">
+            <div class="card rounded" style="border: 0px;">
+              <img src="{{url_for('static',filename='img/image2.png')}}" draggable="true" class=" card__face card__face--front w-100 img-responsive">
+              <img src="{{url_for('static',filename='img/image1.png')}}" draggable="true"  class=" card__face card__face--back w-100 img-responsive">
+            </div>
+          </div>
+        </div>      
+    </div>
+  </div>
+
+</div>
+<center>
+<div id="kd" style="display: none;">
+    <img src="{{url_for('static',filename='img/kd.png')}}" style="height:100% ; width: 100%">
+</div>
+</center>
+
+
+            <div class="chat_window" style="display: none;">
+                <div class="chat_header">
+                    <!--Add the name of the bot here -->
+                    <span style="color:#4CA690;margin-left: 5px;font-family:iranica; font-weight:bold;">Kheireddine ettounsi</span>
+                    <span style="color:#4CA690;margin-right: 5px;float:right;margin-top: 5px;" id="close">
+                    <i class="material-icons">close</i>
+                    </span>
+                 </div>
+                <ul class="messages" id="chats" enctype ="multipart"></ul>
+                <div class="bottom_wrapper clearfix ">
+                    <div class=" message_input_wrapper"> 
+                        <button id ="start-record-btn" title="Start Recording" >
+                            <span>
+                                <img src="{{url_for('static',filename='img/Microphone.png')}}" style="max-height: 30px; max-width: 30px;">
+                            </span>
+                        </button>
+                        <button id="pause-record-btn" title="Pause Recording" style="display: none;">
+                            <span>
+                                <img src="{{url_for('static',filename='img/stop.png')}}" style="max-width: 20px; max-width: 20px;">
+                            </span>
+                        </button>              
+                        <input id="msg_input" class="message_input" placeholder="Kheireddine est à votre service ..." />
+                        <div class="send_message">
+                            <span style="color:#F2E2C4">
+                                <i class="material-icons text">send</i>
+                            </span>
+                        </div>
+                    </div>                  
+                  
+                </div>
+            </div>
+            <div class="message_template">
+                <li class="message">
+                    <div class="avatar"></div>
+                    <div class="text_wrapper">
+                        <div class="text"></div>
+                    </div>
+                </li>
+            </div>
+              <!--bot widget -->
+         <div class="profile_div" id="profile_div" style="display: none;">
+            <img class="imgProfile" src="static/img/botAvatar.png"/>
+         </div>
+      
+
+
+{% endblock %}
+
+{% block other_footers %}
+
+<script src="{{ url_for('static', filename='js/bind.js') }}"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+{% endblock %}
